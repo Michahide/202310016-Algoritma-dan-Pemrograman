@@ -1,0 +1,8 @@
+uses crt;
+var
+k,l,m,n,p:integer;
+r:real;
+begin
+writeln ('Input data 1= '); readln (k);
+writeln ('Input data 2= '); readln (l);
+m:=

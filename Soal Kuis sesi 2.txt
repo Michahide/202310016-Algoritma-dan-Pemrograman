@@ -1,0 +1,21 @@
+Kuis sesi 2
+
+Soal 1
+
+umur sarah adalah 18 tahun 5 bulan 23 hari .
+bila diasumsikan 1 thn 365 hari dan 1 bulan 30 hari 
+buat program untuk menghitung umur sarah dalam satuan hari
+
+Soal 2
+Kapasitas penyimpanan sebuah harddisk adalah X byte. Bila diasumsikan 1 kB=1000 Byte
+dan 1 MB=1.000.000 Byte, buat programnya.
+
+Contoh:
+X= 9.263.141 Byte 
+Ini berarti kapasitas penyimpanan harddisk tersebut = 9 MB + 263 kB + 141 Byte
+
+Soal 3
+Buat program yang membaca NIK, nama karyawan, bagian, jabatan, dan gaji pokok karyawan
+dengan menampilkan tunjangan dan gaji bersih untuk karyawan tersebut dengan ketentuan:
+	Tunjangan = Rp 1.800.000
+	Gaji bersih = Gaji pokok + Tunjangan

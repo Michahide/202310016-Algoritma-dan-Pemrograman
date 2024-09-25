@@ -1,0 +1,16 @@
+uses crt;
+var
+n,s:integer;
+begin
+n:=0;
+s:=0;
+     repeat
+           begin
+                n:=n+1;
+                s:=s+n*n;
+           end;
+     until n=6;
+writeln(s);
+readln;
+end.
+{Michael Mervin Ruswan 202310016 Pascal Repeat Until}

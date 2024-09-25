@@ -1,0 +1,715 @@
+uses crt;
+var
+hari, menu1, menu2, menu3, menu4, kuantitas1, kuantitas2, kuantitas3
+,kuantitas4, pilihan1,pilihan2,pilihan3: integer;
+bayar1, bayar2, bayar3, bayar4, totalbayar: longint;
+
+begin clrscr;
+textcolor(5);
+gotoxy(29,1);write('===== Artanta Cafe =====');
+gotoxy(9,3); write('Selamat datang di Artanta Cafe!');
+gotoxy(9,5); write('1. Weekday (Senin-Jumat)');
+gotoxy(9,7); write('2. Weekend (Sabtu-Minggu)');
+gotoxy(9,9); write('Mohon masukkan hari apa Anda datang ke cafe kami');
+gotoxy(9,11);write('(Ketikkan angkanya saja): ');
+readln(hari);
+
+case (hari) of
+     1:
+     begin
+          gotoxy(9,13); write('==== Weekday menu ====');
+          gotoxy(9,15); write('1. Spaghetti Bolognese...25k');
+          gotoxy(9,17); write('2. Fried Rice............20k');
+          gotoxy(9,19); write('3. Cappucino.............20k');
+          gotoxy(9,21); write('4. Americanno............20k');
+          gotoxy(9,23); write('Menu apa yang Anda inginkan?');
+          gotoxy(9,25); write('(Jika Anda ingin membatalkan pesanan Anda, silakan ketik 0).: ');
+          readln(menu1);
+          case (menu1) of
+               0: {Pesanan batal}
+                  begin
+                  gotoxy(9,80);write ('Pesanan Anda dibatalkan.');
+                  end;
+
+               else
+                   begin {Pesanan dilanjutkan}
+                        gotoxy(9,27); write('Baik, yang Anda pesan adalah menu ',menu1);
+                        gotoxy(9,29); write('Silakan masukkan jumlah porsi yang Anda inginkan: ');
+                        readln(kuantitas1);
+                        gotoxy(9,31); write('Apakah Anda ingin menambahkan pesanan Anda?');
+                        gotoxy(9,33); write('(Jika ya ketik 1, jika tidak ketik 0.): ');
+                        readln(pilihan1);
+                        case (pilihan1) of
+                             1: {Pesanan kedua}
+                                begin
+                                     gotoxy(9,35); write('Menu yang Anda ingin pesan: ');
+                                     readln(menu2);
+                                     gotoxy(9,37); write('Baik, yang Anda pesan adalah menu ',menu2);
+                                     gotoxy(9,39); write('. Silakan masukkan jumlah porsi yang Anda inginkan: ');
+                                     readln(kuantitas2);
+                                     gotoxy(9,41); write('Apakah Anda ingin menambahkan pesanan Anda?');
+                                     gotoxy(9,43); write('(Jika ya ketik 1, jika tidak ketik 0.): ');
+                                     readln(pilihan2);
+                                     case (pilihan2) of
+                                          1: {Pesanan Ketiga}
+                                             begin
+                                                   gotoxy(9,45); write('Menu yang Anda ingin pesan: ');
+                                                   readln(menu3);
+                                                   gotoxy(9,47); write('Baik, yang Anda pesan adalah menu ',menu3);
+                                                   gotoxy(9,49); write('. Silakan masukkan jumlah porsi yang Anda inginkan: ');
+                                                   readln(kuantitas3);
+                                                   gotoxy(9,51); write('Apakah Anda ingin menambahkan pesanan Anda?');
+                                                   gotoxy(9,53); write('(Jika ya ketik 1, jika tidak ketik 0.): ');
+                                                   readln(pilihan3);
+                                                   case (pilihan3) of
+                                                        1: {Pesanan keempat}
+                                                          begin
+                                                               gotoxy(9,55); write('Menu yang Anda ingin pesan: ');
+                                                               readln(menu4);
+                                                               gotoxy(9,57); write('Baik, yang Anda pesan adalah menu ',menu4);
+                                                               gotoxy(9,59); write('. Silakan masukkan jumlah porsi');
+                                                               write(' yang Anda inginkan: ');
+                                                               readln(kuantitas4);
+                                                               case (menu1) of
+                                                                    1:
+                                                                      begin
+                                                                           bayar1:=25000*kuantitas1;
+                                                                           gotoxy(9,61);
+                                                                           write('Spaghetti Bolognese ',kuantitas1);
+                                                                           write('x: Rp ',bayar1);
+                                                                      end;
+                                                                    2:
+                                                                     begin
+                                                                          bayar1:=20000*kuantitas1;
+                                                                          gotoxy(9,61);
+                                                                          write('Fried Rice ',kuantitas1,'x: Rp ',bayar1);
+                                                                     end;
+                                                                    3:
+                                                                      begin
+                                                                           bayar1:=20000*kuantitas1;
+                                                                           gotoxy(9,61);
+                                                                           write('Cappucino ',kuantitas1,'x: Rp ',bayar1);
+                                                                      end;
+                                                                    4:
+                                                                      begin
+                                                                           bayar1:=20000*kuantitas1;
+                                                                           gotoxy(9,61);
+                                                                           write('Americanno ',kuantitas1,'x: Rp ',bayar1);
+                                                                      end;
+                                                               end;
+
+                                                               case (menu2) of
+                                                                    1:
+                                                                      begin
+                                                                           bayar2:=25000*kuantitas2;
+                                                                           gotoxy(9,63);
+                                                                           write('Spaghetti Bolognese ',kuantitas2);
+                                                                           write('x: Rp ',bayar2);
+                                                                      end;
+                                                                    2:
+                                                                      begin
+                                                                           bayar2:=20000*kuantitas2;
+                                                                           gotoxy(9,63);
+                                                                           write('Fried Rice ',kuantitas2,'x: Rp ',bayar2);
+                                                                      end;
+                                                                    3:
+                                                                      begin
+                                                                           bayar2:=20000*kuantitas2;
+                                                                           gotoxy(9,63);
+                                                                           write('Cappucino ',kuantitas2,'x: Rp ',bayar2);
+                                                                      end;
+                                                                    4:
+                                                                    begin
+                                                                         bayar2:=20000*kuantitas2;
+                                                                         gotoxy(9,63);
+                                                                         write('Americanno ',kuantitas2,'x: Rp ',bayar2);
+                                                                    end;
+                                                               end;
+
+                                                               case (menu3) of
+                                                                    1:
+                                                                      begin
+                                                                           bayar3:=25000*kuantitas3;
+                                                                           gotoxy(9,65);
+                                                                           write('Spaghetti Bolognese ',kuantitas3);
+                                                                           write('x: Rp ',bayar3);
+                                                                      end;
+                                                                    2:
+                                                                      begin
+                                                                           bayar3:=20000*kuantitas3;
+                                                                           gotoxy(9,65);
+                                                                           write('Fried Rice ',kuantitas3,'x: Rp ',bayar3);
+                                                                      end;
+                                                                    3:
+                                                                      begin
+                                                                           bayar3:=20000*kuantitas3;
+                                                                           gotoxy(9,65);
+                                                                           write('Cappucino ',kuantitas3,'x: Rp ',bayar3);
+                                                                      end;
+                                                                    4:
+                                                                    begin
+                                                                         bayar3:=20000*kuantitas3;
+                                                                         gotoxy(9,65);
+                                                                         write('Americanno ',kuantitas3,'x: Rp ',bayar3);
+                                                                    end;
+                                                               end;
+
+                                                               case (menu4) of
+                                                                    1:
+                                                                      begin
+                                                                           bayar4:=25000*kuantitas4;
+                                                                           gotoxy(9,67);
+                                                                           write('Spaghetti Bolognese ',kuantitas4);
+                                                                           write('x: Rp ',bayar4);
+                                                                      end;
+                                                                    2:
+                                                                     begin
+                                                                          bayar4:=20000*kuantitas4;
+                                                                          gotoxy(9,67);
+                                                                          write('Fried Rice ',kuantitas4,'x: Rp ',bayar4);
+                                                                     end;
+                                                                    3:
+                                                                      begin
+                                                                           bayar4:=20000*kuantitas4;
+                                                                          gotoxy(9,67);
+                                                                          write('Cappucino ',kuantitas4,'x: Rp ',bayar4);
+                                                                      end;
+                                                                    4:
+                                                                      begin
+                                                                           bayar4:=20000*kuantitas4;
+                                                                           gotoxy(9,67);
+                                                                           write('Americanno ',kuantitas4,'x: Rp ',bayar4);
+                                                                      end;
+                                                               end;
+                                                          totalbayar:=bayar1+bayar2+bayar3+bayar4;
+                                                          gotoxy(9,78);
+                                                          write('Total yang harus Anda bayar adalah: Rp ',totalbayar);
+                                                          gotoxy(9,80);
+                                                          write('Silakan ambil struk Anda dan membayarnya di kasir.')
+                                                          end;
+                                                        0: {Hitung 3 pesanan}
+                                                          begin
+                                                               case (menu1) of
+                                                                    1:
+                                                                      begin
+                                                                           bayar1:=25000*kuantitas1;
+                                                                           gotoxy(9,61); write('Spaghetti Bolognese ',kuantitas1);
+                                                                           write('x: Rp ',bayar1);
+                                                                      end;
+                                                                    2:
+                                                                     begin
+                                                                          bayar1:=20000*kuantitas1;
+                                                                          gotoxy(9,61); write('Fried Rice ',kuantitas1,'x: Rp ',bayar1);
+                                                                     end;
+                                                                    3:
+                                                                      begin
+                                                                           bayar1:=20000*kuantitas1;
+                                                                           gotoxy(9,61); write('Cappucino ',kuantitas1,'x: Rp ',bayar1);
+                                                                      end;
+                                                                    4:
+                                                                      begin
+                                                                           bayar1:=20000*kuantitas1;
+                                                                           gotoxy(9,61); write('Americanno ',kuantitas1,'x: Rp ',bayar1);
+                                                                      end;
+                                                               end;
+
+                                                               case (menu2) of
+                                                                    1:
+                                                                      begin
+                                                                           bayar2:=25000*kuantitas2;
+                                                                           gotoxy(9,63); write('Spaghetti Bolognese ',kuantitas2);
+                                                                           write('x: Rp ',bayar2);
+                                                                      end;
+                                                                    2:
+                                                                      begin
+                                                                           bayar2:=20000*kuantitas2;
+                                                                           gotoxy(9,63); write('Fried Rice ',kuantitas2,'x: Rp ',bayar2);
+                                                                      end;
+                                                                    3:
+                                                                      begin
+                                                                           bayar2:=20000*kuantitas2;
+                                                                           gotoxy(9,63); write('Cappucino ',kuantitas2,'x: Rp ',bayar2);
+                                                                      end;
+                                                                    4:
+                                                                    begin
+                                                                         bayar2:=20000*kuantitas2;
+                                                                         gotoxy(9,63); write('Americanno ',kuantitas2,'x: Rp ',bayar2);
+                                                                    end;
+                                                               end;
+
+                                                               case (menu3) of
+                                                                    1:
+                                                                      begin
+                                                                           bayar3:=25000*kuantitas3;
+                                                                           gotoxy(9,65); write('Spaghetti Bolognese ',kuantitas3);
+                                                                           write('x: Rp ',bayar3);
+                                                                      end;
+                                                                    2:
+                                                                      begin
+                                                                           bayar3:=20000*kuantitas3;
+                                                                           gotoxy(9,65); write('Fried Rice ',kuantitas3,'x: Rp ',bayar3);
+                                                                      end;
+                                                                    3:
+                                                                      begin
+                                                                           bayar3:=20000*kuantitas3;
+                                                                           gotoxy(9,65); write('Cappucino ',kuantitas3,'x: Rp ',bayar3);
+                                                                      end;
+                                                                    4:
+                                                                    begin
+                                                                         bayar3:=20000*kuantitas3;
+                                                                         gotoxy(9,65); write('Americanno ',kuantitas3,'x: Rp ',bayar3);
+                                                                    end;
+                                                               end;
+                                                          totalbayar:=bayar1+bayar2+bayar3;
+                                                          gotoxy(9,78); write('Total yang harus Anda bayar adalah: Rp ',totalbayar);
+                                                          gotoxy(9,80); write('Silakan ambil struk Anda dan membayarnya di kasir.');
+                                                          end;
+                                                   end;
+
+                                             end;
+                                          0: {Hitung dua pesanan}
+                                             begin
+                                                  case (menu1) of
+                                                       1:
+                                                         begin
+                                                              bayar1:=25000*kuantitas1;
+                                                              gotoxy(9,61); write('Spaghetti Bolognese ',kuantitas1,'x: Rp ',bayar1);
+
+                                                         end;
+                                                       2:
+                                                         begin
+                                                              bayar1:=20000*kuantitas1;
+                                                              gotoxy(9,61); write('Fried Rice ',kuantitas1,'x: Rp ',bayar1);
+                                                         end;
+                                                       3:
+                                                         begin
+                                                              bayar1:=20000*kuantitas1;
+                                                              gotoxy(9,61); write('Cappucino ',kuantitas1,'x: Rp ',bayar1);
+                                                         end;
+                                                       4:
+                                                         begin
+                                                              bayar1:=20000*kuantitas1;
+                                                              gotoxy(9,61); write('Americanno ',kuantitas1,'x: Rp ',bayar1);
+                                                         end;
+                                                  end;
+
+                                                  case (menu2) of
+                                                       1:
+                                                         begin
+                                                              bayar2:=25000*kuantitas2;
+                                                              gotoxy(9,63); write('Spaghetti Bolognese ',kuantitas2,'x: Rp ',bayar2);
+
+                                                         end;
+                                                       2:
+                                                         begin
+                                                              bayar2:=20000*kuantitas2;
+                                                              gotoxy(9,63); write('Fried Rice ',kuantitas2,'x: Rp ',bayar2);
+                                                         end;
+                                                       3:
+                                                         begin
+                                                              bayar2:=20000*kuantitas2;
+                                                              gotoxy(9,63); write('Cappucino ',kuantitas2,'x: Rp ',bayar2);
+                                                         end;
+                                                       4:
+                                                         begin
+                                                              bayar2:=20000*kuantitas2;
+                                                              gotoxy(9,63); write('Americanno ',kuantitas2,'x: Rp ',bayar2);
+                                                         end;
+                                                  end;
+                                             totalbayar:=bayar1+bayar2;
+                                             gotoxy(9,78); write('Total yang harus Anda bayar adalah: Rp ',totalbayar);
+                                             gotoxy(9,80); write('Silakan ambil struk Anda dan membayarnya di kasir.');
+                                             end;
+
+                                     end;
+
+                                end;
+                             0: {Satu pesanan saja}
+                                begin
+                                     write('Baik, pesanan Anda adalah: ');
+                                          case (menu1) of
+                                               1:
+                                                 begin
+                                                      bayar1:=25000*kuantitas1;
+                                                      gotoxy(9,61); write('Spaghetti Bolognese ',kuantitas1,'x: Rp ',bayar1);
+
+                                                 end;
+                                               2:
+                                                 begin
+                                                      bayar1:=20000*kuantitas1;
+                                                      gotoxy(9,61); write('Fried Rice ',kuantitas1,'x: Rp ',bayar1);
+                                                 end;
+                                               3:
+                                                 begin
+                                                      bayar1:=20000*kuantitas1;
+                                                      gotoxy(9,61); write('Cappucino ',kuantitas1,'x: Rp ',bayar1);
+                                                 end;
+                                               4:
+                                                 begin
+                                                      bayar1:=20000*kuantitas1;
+                                                      gotoxy(9,61); write('Americanno ',kuantitas1,'x: Rp ',bayar1);
+                                                 end;
+
+                                          end;
+                                gotoxy(9,78); write('Total yang harus Anda bayar adalah: Rp ',bayar1);
+                                gotoxy(9,80); write('Silakan ambil struk Anda dan membayarnya di kasir.');
+                                end;
+                         end;
+                   end;
+          end;
+
+
+     end;
+
+     2:
+     begin
+          gotoxy(9,13); write('==== Weekend menu ====');
+          gotoxy(9,15); write('1. Zuppa Soup...............25k');
+          gotoxy(9,17); write('2. Toasted Bread............20k');
+          gotoxy(9,19); write('3. Cappucino................20k');
+          gotoxy(9,21); write('4. Latte....................20k');
+          gotoxy(9,23); write('Menu apa yang Anda inginkan?');
+          gotoxy(9,25); write('(Jika Anda ingin membatalkan pesanan Anda, silakan ketik 0).: ');
+          readln(menu1);
+          case (menu1) of
+               0: {Pesanan batal}
+                  begin
+                  gotoxy(9,25);write ('Pesanan Anda dibatalkan. Kami menantikan kunjungan Anda kembali.');
+                  end;
+
+               else
+                   begin {Pesanan dilanjutkan}
+                        gotoxy(9,27); write('Baik, yang Anda pesan adalah menu ',menu1);
+                        gotoxy(9,29); write('Silakan masukkan jumlah porsi yang Anda inginkan: ');
+                        readln(kuantitas1);
+                        gotoxy(9,31); write('Apakah Anda ingin menambahkan pesanan Anda?');
+                        gotoxy(9,33); write('(Jika ya ketik 1, jika tidak ketik 0.): ');
+                        readln(pilihan1);
+                        case (pilihan1) of
+                             1: {Pesanan kedua}
+                                begin
+                                     gotoxy(9,35); write('Menu yang Anda ingin pesan: ');
+                                     readln(menu2);
+                                     gotoxy(9,37); write('Baik, yang Anda pesan adalah menu ',menu2);
+                                     gotoxy(9,39); write('. Silakan masukkan jumlah porsi yang Anda inginkan: ');
+                                     readln(kuantitas2);
+                                     gotoxy(9,41); write('Apakah Anda ingin menambahkan pesanan Anda?');
+                                     gotoxy(9,43); write('(Jika ya ketik 1, jika tidak ketik 0.): ');
+                                     readln(pilihan2);
+                                     case (pilihan2) of
+                                          1: {Pesanan Ketiga}
+                                             begin
+                                                   gotoxy(9,45); write('Menu yang Anda ingin pesan: ');
+                                                   readln(menu3);
+                                                   gotoxy(9,47); write('Baik, yang Anda pesan adalah menu ',menu3);
+                                                   gotoxy(9,49); write('. Silakan masukkan jumlah porsi yang Anda inginkan: ');
+                                                   readln(kuantitas3);
+                                                   gotoxy(9,51); write('Apakah Anda ingin menambahkan pesanan Anda?');
+                                                   gotoxy(9,53); write('(Jika ya ketik 1, jika tidak ketik 0.): ');
+                                                   readln(pilihan3);
+                                                   case (pilihan3) of
+                                                        1: {Pesanan keempat}
+                                                          begin
+                                                               gotoxy(9,55); write('Menu yang Anda ingin pesan: ');
+                                                               readln(menu4);
+                                                               gotoxy(9,57); write('Baik, yang Anda pesan adalah menu ',menu4);
+                                                               gotoxy(9,59); write('. Silakan masukkan jumlah porsi');
+                                                               write(' yang Anda inginkan: ');
+                                                               readln(kuantitas4);
+                                                               case (menu1) of
+                                                                    1:
+                                                                      begin
+                                                                           bayar1:=25000*kuantitas1;
+                                                                           gotoxy(9,61);
+                                                                           write('Zuppa Soup ',kuantitas1);
+                                                                           write('x: Rp ',bayar1);
+                                                                      end;
+                                                                    2:
+                                                                     begin
+                                                                          bayar1:=20000*kuantitas1;
+                                                                          gotoxy(9,61);
+                                                                          write('Toasted Bread ',kuantitas1,'x: Rp ',bayar1);
+                                                                     end;
+                                                                    3:
+                                                                      begin
+                                                                           bayar1:=20000*kuantitas1;
+                                                                           gotoxy(9,61);
+                                                                           write('Cappucino ',kuantitas1,'x: Rp ',bayar1);
+                                                                      end;
+                                                                    4:
+                                                                      begin
+                                                                           bayar1:=20000*kuantitas1;
+                                                                           gotoxy(9,61);
+                                                                           write('Latte ',kuantitas1,'x: Rp ',bayar1);
+                                                                      end;
+                                                               end;
+
+                                                               case (menu2) of
+                                                                    1:
+                                                                      begin
+                                                                           bayar2:=25000*kuantitas2;
+                                                                           gotoxy(9,63);
+                                                                           write('Zuppa Soup ',kuantitas2);
+                                                                           write('x: Rp ',bayar2);
+                                                                      end;
+                                                                    2:
+                                                                      begin
+                                                                           bayar2:=20000*kuantitas2;
+                                                                           gotoxy(9,63);
+                                                                           write('Toasted Bread ',kuantitas2,'x: Rp ',bayar2);
+                                                                      end;
+                                                                    3:
+                                                                      begin
+                                                                           bayar2:=20000*kuantitas2;
+                                                                           gotoxy(9,63);
+                                                                           write('Cappucino ',kuantitas2,'x: Rp ',bayar2);
+                                                                      end;
+                                                                    4:
+                                                                    begin
+                                                                         bayar2:=20000*kuantitas2;
+                                                                         gotoxy(9,63);
+                                                                         write('Latte ',kuantitas2,'x: Rp ',bayar2);
+                                                                    end;
+                                                               end;
+
+                                                               case (menu3) of
+                                                                    1:
+                                                                      begin
+                                                                           bayar3:=25000*kuantitas3;
+                                                                           gotoxy(9,65);
+                                                                           write('Zuppa Soup ',kuantitas3);
+                                                                           write('x: Rp ',bayar3);
+                                                                      end;
+                                                                    2:
+                                                                      begin
+                                                                           bayar3:=20000*kuantitas3;
+                                                                           gotoxy(9,65);
+                                                                           write('Toasted Bread ',kuantitas3,'x: Rp ',bayar3);
+                                                                      end;
+                                                                    3:
+                                                                      begin
+                                                                           bayar3:=20000*kuantitas3;
+                                                                           gotoxy(9,65);
+                                                                           write('Cappucino ',kuantitas3,'x: Rp ',bayar3);
+                                                                      end;
+                                                                    4:
+                                                                    begin
+                                                                         bayar3:=20000*kuantitas3;
+                                                                         gotoxy(9,65);
+                                                                         write('Latte ',kuantitas3,'x: Rp ',bayar3);
+                                                                    end;
+                                                               end;
+
+                                                               case (menu4) of
+                                                                    1:
+                                                                      begin
+                                                                           bayar4:=25000*kuantitas4;
+                                                                           gotoxy(9,67);
+                                                                           write('Zuppa Soup ',kuantitas4);
+                                                                           write('x: Rp ',bayar4);
+                                                                      end;
+                                                                    2:
+                                                                     begin
+                                                                          bayar4:=20000*kuantitas4;
+                                                                          gotoxy(9,67);
+                                                                          write('Toasted Bread ',kuantitas4,'x: Rp ',bayar4);
+                                                                     end;
+                                                                    3:
+                                                                      begin
+                                                                           bayar4:=20000*kuantitas4;
+                                                                          gotoxy(9,67);
+                                                                          write('Cappucino ',kuantitas4,'x: Rp ',bayar4);
+                                                                      end;
+                                                                    4:
+                                                                      begin
+                                                                           bayar4:=20000*kuantitas4;
+                                                                           gotoxy(9,67);
+                                                                           write('Latte ',kuantitas4,'x: Rp ',bayar4);
+                                                                      end;
+                                                               end;
+                                                          totalbayar:=bayar1+bayar2+bayar3+bayar4;
+                                                          gotoxy(9,78);
+                                                          write('Total yang harus Anda bayar adalah: Rp ',totalbayar);
+                                                          gotoxy(9,80);
+                                                          write('Silakan ambil struk Anda dan membayarnya di kasir.')
+                                                          end;
+                                                        0: {Hitung 3 pesanan}
+                                                          begin
+                                                               case (menu1) of
+                                                                    1:
+                                                                      begin
+                                                                           bayar1:=25000*kuantitas1;
+                                                                           gotoxy(9,61); write('Zuppa Soup ',kuantitas1);
+                                                                           write('x: Rp ',bayar1);
+                                                                      end;
+                                                                    2:
+                                                                     begin
+                                                                          bayar1:=20000*kuantitas1;
+                                                                          gotoxy(9,61); write('Toasted Bread ',kuantitas1,'x: Rp ',bayar1);
+                                                                     end;
+                                                                    3:
+                                                                      begin
+                                                                           bayar1:=20000*kuantitas1;
+                                                                           gotoxy(9,61); write('Cappucino ',kuantitas1,'x: Rp ',bayar1);
+                                                                      end;
+                                                                    4:
+                                                                      begin
+                                                                           bayar1:=20000*kuantitas1;
+                                                                           gotoxy(9,61); write('Latte ',kuantitas1,'x: Rp ',bayar1);
+                                                                      end;
+                                                               end;
+
+                                                               case (menu2) of
+                                                                    1:
+                                                                      begin
+                                                                           bayar2:=25000*kuantitas2;
+                                                                           gotoxy(9,63); write('Zuppa Soup ',kuantitas2);
+                                                                           write('x: Rp ',bayar2);
+                                                                      end;
+                                                                    2:
+                                                                      begin
+                                                                           bayar2:=20000*kuantitas2;
+                                                                           gotoxy(9,63); write('Toasted Bread ',kuantitas2,'x: Rp ',bayar2);
+                                                                      end;
+                                                                    3:
+                                                                      begin
+                                                                           bayar2:=20000*kuantitas2;
+                                                                           gotoxy(9,63); write('Cappucino ',kuantitas2,'x: Rp ',bayar2);
+                                                                      end;
+                                                                    4:
+                                                                    begin
+                                                                         bayar2:=20000*kuantitas2;
+                                                                         gotoxy(9,63); write('Latte ',kuantitas2,'x: Rp ',bayar2);
+                                                                    end;
+                                                               end;
+
+                                                               case (menu3) of
+                                                                    1:
+                                                                      begin
+                                                                           bayar3:=25000*kuantitas3;
+                                                                           gotoxy(9,65); write('Zuppa Soup ',kuantitas3);
+                                                                           write('x: Rp ',bayar3);
+                                                                      end;
+                                                                    2:
+                                                                      begin
+                                                                           bayar3:=20000*kuantitas3;
+                                                                           gotoxy(9,65); write('Toasted Bread ',kuantitas3,'x: Rp ',bayar3);
+                                                                      end;
+                                                                    3:
+                                                                      begin
+                                                                           bayar3:=20000*kuantitas3;
+                                                                           gotoxy(9,65); write('Cappucino ',kuantitas3,'x: Rp ',bayar3);
+                                                                      end;
+                                                                    4:
+                                                                    begin
+                                                                         bayar3:=20000*kuantitas3;
+                                                                         gotoxy(9,65); write('Latte ',kuantitas3,'x: Rp ',bayar3);
+                                                                    end;
+                                                               end;
+                                                          totalbayar:=bayar1+bayar2+bayar3;
+                                                          gotoxy(9,78); write('Total yang harus Anda bayar adalah: Rp ',totalbayar);
+                                                          gotoxy(9,80); write('Silakan ambil struk Anda dan membayarnya di kasir.');
+                                                          end;
+                                                   end;
+
+                                             end;
+                                          0: {Hitung dua pesanan}
+                                             begin
+                                                  case (menu1) of
+                                                       1:
+                                                         begin
+                                                              bayar1:=25000*kuantitas1;
+                                                              gotoxy(9,61); write('Zuppa Soup ',kuantitas1,'x: Rp ',bayar1);
+
+                                                         end;
+                                                       2:
+                                                         begin
+                                                              bayar1:=20000*kuantitas1;
+                                                              gotoxy(9,61); write('Toasted Bread ',kuantitas1,'x: Rp ',bayar1);
+                                                         end;
+                                                       3:
+                                                         begin
+                                                              bayar1:=20000*kuantitas1;
+                                                              gotoxy(9,61); write('Cappucino ',kuantitas1,'x: Rp ',bayar1);
+                                                         end;
+                                                       4:
+                                                         begin
+                                                              bayar1:=20000*kuantitas1;
+                                                              gotoxy(9,61); write('Latte ',kuantitas1,'x: Rp ',bayar1);
+                                                         end;
+                                                  end;
+
+                                                  case (menu2) of
+                                                       1:
+                                                         begin
+                                                              bayar2:=25000*kuantitas2;
+                                                              gotoxy(9,63); write('Zuppa Soup ',kuantitas2,'x: Rp ',bayar2);
+
+                                                         end;
+                                                       2:
+                                                         begin
+                                                              bayar2:=20000*kuantitas2;
+                                                              gotoxy(9,63); write('Toasted Bread ',kuantitas2,'x: Rp ',bayar2);
+                                                         end;
+                                                       3:
+                                                         begin
+                                                              bayar2:=20000*kuantitas2;
+                                                              gotoxy(9,63); write('Cappucino ',kuantitas2,'x: Rp ',bayar2);
+                                                         end;
+                                                       4:
+                                                         begin
+                                                              bayar2:=20000*kuantitas2;
+                                                              gotoxy(9,63); write('Latte ',kuantitas2,'x: Rp ',bayar2);
+                                                         end;
+                                                  end;
+                                             totalbayar:=bayar1+bayar2;
+                                             gotoxy(9,78); write('Total yang harus Anda bayar adalah: Rp ',totalbayar);
+                                             gotoxy(9,80); write('Silakan ambil struk Anda dan membayarnya di kasir.');
+                                             end;
+
+                                     end;
+
+                                end;
+                             0: {Satu pesanan saja}
+                                begin
+                                     write('Baik, pesanan Anda adalah: ');
+                                          case (menu1) of
+                                               1:
+                                                 begin
+                                                      bayar1:=25000*kuantitas1;
+                                                      gotoxy(9,61); write('Zuppa Soup ',kuantitas1,'x: Rp ',bayar1);
+
+                                                 end;
+                                               2:
+                                                 begin
+                                                      bayar1:=20000*kuantitas1;
+                                                      gotoxy(9,61); write('Toasted Bread ',kuantitas1,'x: Rp ',bayar1);
+                                                 end;
+                                               3:
+                                                 begin
+                                                      bayar1:=20000*kuantitas1;
+                                                      gotoxy(9,61); write('Cappucino ',kuantitas1,'x: Rp ',bayar1);
+                                                 end;
+                                               4:
+                                                 begin
+                                                      bayar1:=20000*kuantitas1;
+                                                      gotoxy(9,61); write('Latte ',kuantitas1,'x: Rp ',bayar1);
+                                                 end;
+
+                                          end;
+                                gotoxy(9,78); write('Total yang harus Anda bayar adalah: Rp ',bayar1);
+                                gotoxy(9,80); write('Silakan ambil struk Anda dan membayarnya di kasir.');
+                                end;
+                         end;
+                   end;
+          end;
+     end;
+
+     else
+     gotoxy(9,80); write('Maaf Anda salah memasukkan angka. Harap coba lagi.');
+end;
+
+gotoxy(9,82); write('Terima kasih. Kami menantikan kunjungan Anda kembail.');
+readln;
+end.
+{Michael Mervin Ruswan 202310016}

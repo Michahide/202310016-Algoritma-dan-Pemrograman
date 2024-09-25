@@ -1,0 +1,17 @@
+uses crt;
+var
+g1:string;
+g2,g3,g4,g5:longint;
+
+begin clrscr;
+writeln('====Konversi Berat Barang====');
+write('Masukkan barang: '); readln(g1);
+write('Berapa berat barang ',g1,' (ton)? '); readln(g2);
+write('Berapa berat barang ',g1,' (kwintal)? '); readln(g3);
+write('Berapa berat barang ',g1,' (kg)? '); readln(g4);
+g2:=g2*1000;
+g3:=g3*100;
+g5:=g2+g3+g4;
+writeln('Total berat barang Anda: ',g5,' kg');
+readln;
+end.

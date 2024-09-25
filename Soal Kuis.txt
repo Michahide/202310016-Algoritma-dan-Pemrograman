@@ -1,0 +1,25 @@
+Soal 1
+Var g
+Berat sebuah barang adalah 2 ton, 5 kwintal, dan 43 kg. ==> contoh
+Buat program untuk menghitung berat barang tersebut dalam satuan kg!
+1 ton = 1000 kg
+1 kwintal = 100 kg.
+Nilai ton, kwintal, dan kg dari berat barang diisikan secara langsung ke variabel!
+
+Input:
+Nama barang
+
+Soal 2
+Kapasitas penyimpanan sebuah harddisk adalah X byte. Bila diasumsikan 1 kB= 1000 byte dan 1 MB=1.000.000 byte,
+buat program untuk mengkonversi kapasitas harddisk tersebut ke dalam MB (MegaByte), kB(kiloByte), dan byte!
+
+Misal x=9.263.141 byte ini berarti kapasitas penyimpanan harddisk tersebut = 9 MB + 263 kB + 141 Byte
+
+12.84 GB = 1.284.000.000 Byte = 1280 MB 4 kB 0 Byte
+
+Soal 3
+Buat program membaca NIK, nama karyawan, bagian, jabatan, dan gaji pokok karyawan untuk dihitung dan menampilkan besar
+tunjangan dan gaji bersih untuk karyawan tersebut.
+Ketentuan:
+	Tunjangan= 1,8 juta
+	Gaji bersih= Gaji pokok + Tunjangan

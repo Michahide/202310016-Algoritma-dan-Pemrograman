@@ -1,0 +1,34 @@
+uses crt;
+var
+a,b,c,d,e,f,g,h,i,j,k,l: longint;
+begin
+writeln('Masukkan jumlah undangan: ');
+readln(a);
+writeln('Berapa hari lamanya sewa organ tunggal: ');
+readln(b);
+writeln('Berapa biaya gedung: ');
+readln(c);
+writeln('biaya makan/undangan: ');
+readln(d);
+k:=d*a;
+writeln('biaya makan seluruhnya: ', k);
+writeln('biaya rias kamar pengantin: ');
+readln(e);
+writeln('berapa biaya upacara adat: ');
+readln(f);
+writeln('berapa biaya organ tunggal perhari:');
+readln(g);
+writeln('biaya sewa kursi/orang: ');
+readln(h);
+l:=h*a;
+writeln('biaya sewa kursi seluruhnya: ', l);
+writeln('berapa biaya dekor?');
+readln(i);
+writeln('berapa biaya penghulu?');
+readln(j);
+writeln('total biaya:Rp  ',c+k+e+f+g+l+i+j);
+writeln('SELAMAT MENAMBAH BEBAN HIDUP');
+readln;
+readln;
+end.
+{Michael Mervin Ruswan 202310016}
